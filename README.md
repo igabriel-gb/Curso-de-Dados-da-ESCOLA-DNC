@@ -1,19 +1,19 @@
 # Cientista de dados da escola de programação DNC certificados: 
-## **Python Fundamentals.   **
-## **SQL for Data Science.   **
-## **Statistics with Python.   **
-## **Machine Learning Cloud Services.   **
-## **Data Cleaning and Data Wrangling.   **
-## **Classification Algorithm in Machine Learning.**   
-## **Linear Regression in Machine Learning.   **
-## **Data Protection and Information Security.  ** 
-## **Clustering in Machine Learning.   **
-## **Machine Learning in Recommender Systems.**   
-## **CRISP-DM.   **
-## **Scrum  Fundamentals. **  
-## **Career Preparation.**   
-## **Presentation Techniques.**   
-## *Data Expert (certificado final)*		  
+### *Python Fundamentals.*
+### *SQL for Data Science.*
+### *Statistics with Python.*
+### *Machine Learning Cloud Services.*
+### *Data Cleaning and Data Wrangling.*
+### *Classification Algorithm in Machine Learning.*  
+### *Linear Regression in Machine Learning.*
+### *Data Protection and Information Security.*
+### *Clustering in Machine Learning.*
+### *Machine Learning in Recommender Systems.*  
+### *CRISP-DM.*
+### *Scrum  Fundamentals.*
+### *Career Preparation.*
+### *Presentation Techniques.*   
+### *Data Expert (certificado final)*		  
 
 
 ## SLOT 1
