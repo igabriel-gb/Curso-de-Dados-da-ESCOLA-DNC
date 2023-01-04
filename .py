@@ -1,61 +1,36 @@
-cardapio_precos = ('Doce', 2.3, 'Bala', 0.15, 'Pizza', 28.9, 'Arroz', 4.5, 'Paçoca', 0.5, 'Pamonha', 5.4)
+print(f'Comanda do pedido\n{("_")*30}\n\nQuantidade | produto   |valor\n\n\n')
 
-cardapio_bar = ('Cerveja', 10.3, 'Porcao', 30.15, 'Pizza', 28.9, 'Refri', 8.5, 'Paçoca', 0.5, 'Peixe', 25.4,'Sinuca', 1.0)
+print(f'\n {("teste").ljust(10, " ")}{("teste").ljust(10, " ")}{("teste").ljust(10, " ")}')
 
-def loja(lista):
+valor = ( 10.9, 5.40, 8.30, 3.40)
+produto = ('Lanche', 'Refri', 'Batata', 'Bombom')
+pedido=[]
+valorTotal=0
+while True:
+    try:
+        for i in range(len(produto[:])):
+            pergunta=input(f'gostaria de {produto[i]} no valor de {valor[i]}?  (S/N)').lower()
+            if pergunta == 's':
+                quantidade=int(input(f'Quantos {produto[i]} voê deseja?'))
+                pedido.append(quantidade)
+
+            else:
+                pedido.append(0)
+                continue
+
+        print(f'{(" PEDIDO ").center(30,".")}')
+        for contador in range(len(produto[:])):
+            print(f'{pedido[contador]} {produto[contador]} valor do {contador+1}° pedido foi de R${(pedido[contador]*valor[contador]):.2f}')
+            valorTotal+=pedido[contador]*valor[contador]
+        print(f'Valor total do pedido foi de R${(valorTotal):.2f}')
+        break            
     
-    cardapio_precos = lista
 
-    def cardapio(lista):
-        cardapio_precos = lista
-        print(f'\n {"-"*32} \n {("Cardápio").center(32,"-")}\n {"-"*32}')
-
-        for i in range(1,  len(cardapio_precos),2):
-            print(f' {cardapio_precos[i-1]} {cardapio_precos[i]}')
-        print('_'*50)
-
-    cardapio(cardapio_precos)    
-
-    valor_pedido=0
-
-    comanda=[]
-
-    while True:
-        pedido = input('\nOque deseja?:  ').capitalize()
-
-        def itens(comanda,valor_pedido):
-            print('_'*50,' \n','Os itens escolhidos foram:\n')
-                
-            for i in range(len(comanda)):
-                print(f'{comanda[i]}')
-            print(f'\nTotal: {valor_pedido:.2f}\n')
-
-        if pedido not in cardapio_precos:
-            loop = input('O intem não está o menu. Deseja continuar?(S/n): ').lower()
-            if loop == 's':
-                cardapio(cardapio_precos)
-                continue
-            else:
-                if comanda == []:
-                    print('Não Houve pedidos')
-                else:
-                    itens(comanda,valor_pedido)
-                break
+       
+    except ValueError:
+        loop=input('Algo de errado. deseja continuar?  (S/N)').lower()
+        if loop=='s':
+            continue
         else:
-            comanda.append(pedido)
-            valor_pedido+=(cardapio_precos[cardapio_precos.index(pedido)+1])
-            
-            itens(comanda,valor_pedido)
-
-            lool_finalizar_pedido = input(f'Deseja Algo mais?(S/n): ').lower()
-
-            if lool_finalizar_pedido == 's':
-                cardapio(cardapio_precos)
-                
-                continue
-            else:
-                itens(comanda,valor_pedido)
-                break
-
-
-loja(cardapio_bar)
+            print('fim do programa!')
+            break
